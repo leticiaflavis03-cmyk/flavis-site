@@ -265,9 +265,9 @@ export default function Home() {
                       : "border-[#d9e2ec] bg-white hover:border-[#4CAF50] hover:shadow-lg"
                   }`}
                 >
-                  <h3 className={`${plan.highlighted ? "mb-1" : "mb-0.5"} text-2xl font-bold text-[#003366]`}>{plan.name}</h3>
+                  <h3 className={`${plan.highlighted ? "mb-0" : "mb-0.5"} text-2xl font-bold leading-tight text-[#003366]`}>{plan.name}</h3>
                   {plan.highlighted && (
-                    <span className="mb-1 inline-flex w-fit rounded-full bg-[#4CAF50] px-2 py-0.5 text-[10px] font-bold uppercase leading-none tracking-wide text-white">
+                    <span className="-mt-0.5 mb-0.5 inline-flex w-fit rounded-full bg-[#4CAF50] px-3.5 py-1.5 text-[10px] font-bold uppercase leading-none tracking-wide text-white shadow-sm ring-2 ring-[#C8EFD0]">
                       Mais indicado
                     </span>
                   )}
