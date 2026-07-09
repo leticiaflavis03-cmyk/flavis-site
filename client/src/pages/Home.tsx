@@ -265,12 +265,14 @@ export default function Home() {
                       : "border-[#d9e2ec] bg-white hover:border-[#4CAF50] hover:shadow-lg"
                   }`}
                 >
-                  {plan.highlighted && (
-                    <div className="mb-4 inline-flex w-fit rounded-full bg-[#4CAF50] px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
-                      Mais indicado
-                    </div>
-                  )}
-                  <h3 className="mb-1 text-2xl font-bold text-[#003366]">{plan.name}</h3>
+                  <h3 className="mb-2 text-2xl font-bold text-[#003366]">{plan.name}</h3>
+                  <div className="mb-3 h-6">
+                    {plan.highlighted && (
+                      <span className="inline-flex rounded-full bg-[#4CAF50] px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                        Mais indicado
+                      </span>
+                    )}
+                  </div>
                   <p className="mb-4 text-sm font-medium text-[#52606d]">{plan.subtitle}</p>
                   <p className="mb-6 rounded-lg bg-[#E8F4F8] p-3 text-sm text-[#003366]">Ideal para: {plan.ideal}</p>
                   <ul className="mb-8 space-y-3">
