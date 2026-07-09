@@ -21,8 +21,10 @@ const whatsappUrl =
   "https://wa.me/5562982428568?text=Ola%2C%20quero%20conhecer%20as%20solucoes%20da%20Flavis%20para%20resfriamento%20medico.";
 const auditUrl =
   "https://wa.me/5562982428568?text=Ola%2C%20gostaria%20de%20agendar%20uma%20auditoria%20de%20confiabilidade%20com%20a%20Flavis.";
-const mailUrl =
-  "mailto:comercial@flavis.com.br?subject=Contato%20pelo%20site%20Flavis&body=Ola%2C%20quero%20saber%20mais%20sobre%20as%20solucoes%20da%20Flavis.";
+const emailComposeUrl =
+  "https://mail.google.com/mail/?view=cm&fs=1&to=comercial@flavis.com.br&su=Contato%20pelo%20site%20Flavis&body=Ola%2C%20quero%20saber%20mais%20sobre%20as%20solucoes%20da%20Flavis.";
+const specsComposeUrl =
+  "https://mail.google.com/mail/?view=cm&fs=1&to=comercial@flavis.com.br&su=Especificacoes%20tecnicas%20Flavis%20IoT&body=Ola%2C%20quero%20receber%20as%20especificacoes%20tecnicas%20do%20Transmissor%20Flavis%20IoT.";
 
 const images = {
   logo: "https://flavismed-5iuhpp6j.manus.space/manus-storage/flavis_logo_f575c896.png",
@@ -257,7 +259,7 @@ export default function Home() {
                   ))}
                 </ul>
                 <Button asChild className="bg-[#003366] px-8 text-white hover:bg-[#002244]">
-                  <a href={mailUrl}>Receber especificacoes</a>
+                  <a href={specsComposeUrl} target="_blank" rel="noopener noreferrer">Receber especificacoes</a>
                 </Button>
               </div>
               <div className="overflow-hidden rounded-lg shadow-2xl">
@@ -337,7 +339,7 @@ export default function Home() {
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white px-8 text-white hover:bg-white/10">
-                <a href={mailUrl}>
+                <a href={emailComposeUrl} target="_blank" rel="noopener noreferrer">
                   <Mail className="h-4 w-4" /> Falar por e-mail
                 </a>
               </Button>
@@ -350,7 +352,9 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl">
           <div className="mb-8 grid gap-8 md:grid-cols-4">
             <div>
-              <img src={images.logo} alt="Flavis Logo" className="mb-4 h-8 w-auto brightness-0 invert" />
+              <div className="mb-4 inline-flex rounded-md bg-white p-2">
+                <img src={images.logo} alt="Flavis Logo" className="h-8 w-auto" />
+              </div>
               <p className="text-sm text-blue-200">Engenharia de confiabilidade para sistemas de resfriamento medico.</p>
             </div>
             <div>
@@ -366,13 +370,13 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-blue-200">
                 <li><a href="#about" className="transition hover:text-white">Sobre</a></li>
                 <li><a href="#technology" className="transition hover:text-white">Tecnologia</a></li>
-                <li><a href={mailUrl} className="transition hover:text-white">Proposta comercial</a></li>
+                <li><a href={emailComposeUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-white">Proposta comercial</a></li>
               </ul>
             </div>
             <div>
               <h4 className="mb-4 font-bold">Contato</h4>
               <ul className="space-y-2 text-sm text-blue-200">
-                <li><a href="mailto:comercial@flavis.com.br" className="transition hover:text-white">comercial@flavis.com.br</a></li>
+                <li><a href={emailComposeUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-white">comercial@flavis.com.br</a></li>
                 <li><a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-white">WhatsApp: (62) 98242-8568</a></li>
                 <li><a href="https://www.flavis.com.br" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">www.flavis.com.br</a></li>
               </ul>
